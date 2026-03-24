@@ -24,6 +24,7 @@ class ChatState(TypedDict):
     messages: Annotated[list[BaseMessage], add_messages]
 
 
+
 def chat_node(state: ChatState):
     messages = state['messages']
     response = llm.invoke(messages)
